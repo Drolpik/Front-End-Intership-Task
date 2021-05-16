@@ -1,0 +1,49 @@
+@import '../../other_styles/functions.scss';
+@import '../../other_styles/variables.scss';
+
+.Container {
+  @include box;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+
+  h1 {
+    @include mainHeader;
+  }
+
+  .InternList {
+    .InternElement {
+      width: 100%;
+      height: 64px;
+      display: flex;
+      flex-flow: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 24px;
+      line-height: 24px;
+      font-weight: 400;
+      font-size: 18px;
+
+      &:hover {
+        border: 2px solid $black-color;
+      }
+
+      &:nth-child(odd) {
+        background-color: $lighten-50-color;
+      }
+
+      &:nth-child(even) {
+        background-color: $lighten-60-color;
+      }
+
+      .Link {
+        text-decoration: none;
+        cursor: pointer;
+
+        .EditBtn {
+          @include imgAndLabel(20px, 19px);
+        }
+      }
+    }
+  }
+}

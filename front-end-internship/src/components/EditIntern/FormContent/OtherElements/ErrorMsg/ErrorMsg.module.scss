@@ -1,0 +1,13 @@
+@import '../../../../../other_styles/variables.scss';
+
+.Container {
+  margin-bottom: 40px;
+
+  p {
+    position: relative;
+    top: 8px;
+    color: $error-color;
+    line-height: 24px;
+    font-size: 16px;
+  }
+}

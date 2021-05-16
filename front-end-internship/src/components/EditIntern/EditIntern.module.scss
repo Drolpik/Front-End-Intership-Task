@@ -1,0 +1,56 @@
+@import '../../other_styles/functions.scss';
+@import '../../other_styles/variables.scss';
+
+.Container {
+  display: flex;
+  justify-content: center;
+
+  .ContentBox {
+    width: 100%;
+    @include box;
+
+    .Link {
+      text-decoration: none;
+      cursor: pointer;
+
+      .BackBtn {
+        position: absolute;
+        left: 0;
+        top: -95px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        @include imgAndLabel(16px, 16px);
+      }
+    }
+
+    h1 {
+      @include mainHeader;
+    }
+
+    form {
+      display: flex;
+      flex-flow: column;
+      text-align: left;
+
+      .SubmitBtn {
+        width: 43%;
+        min-width: 130px;
+        color: $white-color;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        outline: none;
+        border: none;
+        background-color: $black-color;
+        padding: 12px 40px;
+        cursor: pointer;
+        margin-bottom: 0;
+
+        @media screen and (max-width: 545px) {
+          width: 50%;
+        }
+      }
+    }
+  }
+}

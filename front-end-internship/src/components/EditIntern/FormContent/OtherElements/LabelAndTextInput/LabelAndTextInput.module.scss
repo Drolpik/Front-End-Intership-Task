@@ -1,0 +1,19 @@
+@import '../../../../../other_styles/functions.scss';
+
+.Container {
+  @include inputContainer;
+
+  .InputBox {
+    position: relative;
+    width: 100%;
+
+    input {
+      @include inputStyleContent;
+    }
+  }
+
+  .ErrorOn {
+    @include errorIcon(13px);
+    @include errorBoxShadow;
+  }
+}

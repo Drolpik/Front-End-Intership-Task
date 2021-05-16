@@ -1,0 +1,100 @@
+@import './variables.scss';
+
+@mixin box {
+  width: 100%;
+  max-width: 656px;
+  background-color: $lighten_70-color;
+  position: absolute;
+  top: 136px;
+  padding: 40px 80px;
+  min-width: 320px;
+
+  @media screen and (max-width: 1000px) {
+    width: calc(100% - 20px);
+    top: 250px;
+    padding: 20px 40px;
+  }
+  @media screen and (max-width: 500px) {
+    padding: 10 20px;
+  }
+}
+
+@mixin mainHeader {
+  font-weight: 500;
+  text-align: left;
+  line-height: 47px;
+  margin-bottom: 40px;
+  font-size: 40px;
+}
+
+@mixin imgAndLabel($width, $height) {
+  img {
+    width: $width;
+    height: $height;
+    margin-right: 10px;
+  }
+
+  label {
+    font-weight: 500;
+    color: $black-color;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+//=================================
+@mixin inputContainer {
+  display: flex;
+  flex-flow: column;
+  min-width: 210px;
+
+  label:first-of-type {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 8px;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+}
+
+@mixin inputStyleContent {
+  width: 100%;
+  height: 48px;
+  padding: 12px 16px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  outline: none;
+  background: none;
+  border: 1px solid $black-color;
+
+  &:focus {
+    border: 2px solid $black-color;
+    box-shadow: 0px 0px 0px 2px $focus-color;
+  }
+}
+//=================================
+
+//=================================
+@mixin errorIcon($right) {
+  &::after {
+    content: '';
+    position: absolute;
+    right: $right;
+    top: 13px;
+    bottom: 13px;
+    width: 22px;
+    height: 22px;
+    background: url('../assets/errorIcon.svg');
+  }
+}
+
+@mixin errorBoxShadow {
+  input {
+    box-shadow: 0px 0px 0px 2px $error-color;
+  }
+}
+//=================================

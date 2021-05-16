@@ -1,0 +1,25 @@
+@import '../../../../other_styles/functions.scss';
+
+.Container {
+  width: 100%;
+  display: flex;
+
+  .InternshipStart {
+    width: 50%;
+    margin-right: 16px;
+    margin-bottom: 40px;
+  }
+
+  .InternshipEnd {
+    width: 50%;
+  }
+
+  @media screen and (max-width: 545px) {
+    flex-flow: column;
+
+    .InternshipStart,
+    .InternshipEnd {
+      width: 100%;
+    }
+  }
+}
